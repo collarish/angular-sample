@@ -26,7 +26,7 @@ export class AppComponent {
             var r = d.createElement('script'); r.async = true;
             r.src = u + '?c=' + c;
             a.appendChild(r);
-        })(window as PfWindow, document, 'https://my.ohio.pf.dev/static/script.js', 'XbWsMpmZpxLmV24q', 'en'); // Replace 'en' with a proper language code
+        })(window as PfWindow, document, 'https://app.productfruits.com/static/script.js', 'YOUR CODE', 'en'); // Replace 'en' with a proper language code
     }
 }
 
