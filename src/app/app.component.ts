@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit //IMPORT ONINIT INTO FILE OF COMPONENT YOU WANT TO USE// } from '@angular/core';
 import { productFruits } from 'product-fruits';
 
 declare global {
@@ -10,28 +10,15 @@ declare global {
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit //DECLARE YOUR COMPONENT IMPLEMENTING ONINIT// {
     title = 'angular-sample';
 
-    // loadPfLegacy = () => {
-
-    //     const userInformation = { username: 'test-username' }
-
-    //     // @ts-ignore
-    //     window.productFruitsUser = userInformation;
-
-    //     (function (w: PfWindow, d, u, c, l) {
-    //         w.productFruits = w.productFruits || {};
-    //         w.productFruits.language = l; w.productFruits.code = c;
-    //         var a = d.getElementsByTagName('head')[0];
-    //         var r = d.createElement('script'); r.async = true;
-    //         r.src = u + '?c=' + c;
-    //         a.appendChild(r);
-    //     })(window as PfWindow, document, 'https://app.productfruits.com/static/script.js', 'YOUR CODE', 'en'); // Replace 'en' with a proper language code
-    // }
+ public ngOnInit(): void {
+    this.loadPf();
+  } // ONINIT: RUNS CODE ON COMPONENT LOAD//
 
     loadPf = () => {
-        productFruits.init('n1AYOgN22v6hx0ua', 'en', { username: 'npm.test' }, { disableLocationChangeDetection: true });
+        productFruits.init('n1AYOgN22v6hx0ua' //REPLACE WITH YOUR CODE//, 'en', { username: 'test' //REPLACE WITH YOUR USER INFO// }, { disableLocationChangeDetection: true });
         
         productFruits.safeExec($pf => {
             console.log($pf);
