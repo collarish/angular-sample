@@ -325,15 +325,15 @@
     </a>
 </div>
 
-<div class="content" role="main">
+<div (ngInit)="loadPf()" //RUN INIT PF FUNCTION IN MAIN PAGE DIV// class="content" role="main">
 
   <!-- Resources -->
   <h2>Product Fruits example</h2>
   <p>Click on the button to load Product Fruits</p>
 
-  <div>
+  <div >
       <!-- <button (click)="loadPfLegacy()">Load Product Fruits (legacy)</button> -->
-      <button (click)="loadPf()">Load Product Fruits (new NPM way)</button>
+<!--       <button (click)="loadPf()">Load Product Fruits (new NPM way)</button> -->
   </div>
 
 </div>
