@@ -18,7 +18,7 @@ export class AppComponent implements OnInit //DECLARE YOUR COMPONENT IMPLEMENTIN
   } // ONINIT: RUNS CODE ON COMPONENT LOAD//
 
     loadPf = () => {
-        productFruits.init('n1AYOgN22v6hx0ua' //REPLACE WITH YOUR CODE//, 'en', { username: 'test' //REPLACE WITH YOUR USER INFO// }, { disableLocationChangeDetection: true });
+        productFruits.init('n1AYOgN22v6hx0ua' //REPLACE WITH YOUR CODE//, 'en', { username: 'test' //REPLACE WITH YOUR USER INFO// }, { disableLocationChangeDetection: false });
         
         productFruits.safeExec($pf => {
             console.log($pf);
